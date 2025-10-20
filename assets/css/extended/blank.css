@@ -3,3 +3,37 @@ This is just a placeholder blank stylesheet so as to support adding custom style
 
 Read https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#bundling-custom-css-with-themes-assets for more info
 */
+
+@font-face {
+  font-family: "OctupleMax";
+  src: url("/fonts/OctupleMax.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: 'Neuropol';
+    font-style: normal;
+    font-weight: normal;
+    src:  url('/fonts/NEUROPOL.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'BrunoAce';
+    font-style: normal;
+    font-weight: normal;
+    src:  url('/fonts/BrunoAce.ttf') format('truetype');
+}
+
+body{
+    font-family: BrunoAce;
+}
+
+.header .logo a, h1{
+  font-family: OctupleMax;
+  color:#71C560;
+}
+
+#menu li {
+    font-family: OctupleMax;
+    color:#71C560;
+}
+

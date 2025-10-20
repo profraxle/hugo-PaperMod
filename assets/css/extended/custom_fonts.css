@@ -1,0 +1,97 @@
+/*
+This is just a placeholder blank stylesheet so as to support adding custom styles budled with theme's default styles
+
+Read https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#bundling-custom-css-with-themes-assets for more info
+*/
+
+/* === Thumbnail Card Layout === */
+.entry-thumbnail {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.5rem;
+}
+
+.entry-thumbnail .entry-inner {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.entry-cover-thumb {
+  flex-shrink: 0;
+  width: 300px;
+  height: 160px;
+  overflow: hidden;
+  border-radius: 0.5rem;
+}
+
+.entry-cover-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.entry-text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  font-size: small;
+}
+
+.entry-text .entry-header h2 {
+  margin-top: 0;
+}
+
+.entry-content {
+  display: block !important;
+  -webkit-line-clamp: unset !important;
+  -webkit-box-orient: unset !important;
+  overflow: visible !important;
+}
+
+.single-tags {
+  margin-top: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  
+}
+
+.tag-pill {
+  font-size: 0.75rem;
+  padding: 0.2rem 0.5rem;
+  border-radius: 999px;
+  text-decoration: none;
+  background: var(--entry);
+  border: 1px solid var(--border);
+  color: var(--primary);
+  transition: 0.2s ease;
+}
+
+.tag-pill:hover {
+  background: var(--primary);
+  color: var(--entry);
+  border-color: var(--primary);
+}
+
+.entry-tags-list .tag-pill {
+  background: var(--primary);
+  color: var(--entry);
+  border-color: var(--primary);
+  font-size: 0.70rem; /* was 0.75 — tweak as needed */
+  padding: 0.15rem 0.45rem; /* tighter padding to match smaller text */
+}
+
+.entry-tags-list .tag-pill:hover {
+  background: var(--entry);
+  color: var(--primary);
+  border-color: var(--primary);
+}
+.entry-tags {
+  margin-top: 0.2rem;
+  margin-bottom: 0.2rem; /* ← this creates the gap when wrapping */
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.2rem;
+}
+

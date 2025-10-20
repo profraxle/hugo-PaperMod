@@ -23,7 +23,7 @@
 }
 
 .logo a {
-    font-size: 24px;
+    font-size: 36px;
     font-weight: 700;
 }
 
@@ -37,8 +37,8 @@
 }
 
 button#theme-toggle {
-    font-size: 26px;
-    margin: auto 4px;
+    font-size: 24px;
+    margin: auto;
 }
 
 body.dark #moon {
@@ -62,7 +62,10 @@ body:not(.dark) #sun {
 }
 
 #menu a {
-    font-size: 16px;
+    font-size: 24px;
+    padding: 0 10px; /* adds horizontal spacing */
+    display: inline-block;
+    color:#71C560;
 }
 
 #menu .active {
