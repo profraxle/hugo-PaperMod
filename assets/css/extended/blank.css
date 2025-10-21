@@ -5,7 +5,7 @@ Read https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#bundling-custom-cs
 */
 
 @font-face {
-  font-family: "OctupleMax";
+  font-family: "Audiowide";
   src: url("/fonts/Audiowide.ttf") format("truetype");
 }
 
@@ -28,12 +28,12 @@ body{
 }
 
 .header .logo a, h1{
-  font-family: OctupleMax;
+  font-family: Audiowide;
   color:#71C560;
 }
 
 #menu li {
-    font-family: OctupleMax;
+    font-family: Audiowide;
     color:#71C560;
 }
 
