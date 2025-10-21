@@ -17,14 +17,14 @@ Read https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#bundling-custom-cs
 }
 
 @font-face {
-    font-family: 'BrunoAce';
+    font-family: 'Orbitron';
     font-style: normal;
     font-weight: normal;
-    src:  url('/fonts/BrunoAce.ttf') format('truetype');
+    src:  url('/fonts/Orbitron.ttf') format('truetype');
 }
 
 body{
-    font-family: BrunoAce;
+    font-family: Orbitron;
 }
 
 .header .logo a, h1{
