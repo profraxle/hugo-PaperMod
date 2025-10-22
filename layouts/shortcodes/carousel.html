@@ -1,0 +1,52 @@
+{{/* Simple working carousel for PaperMod */}}
+
+{{ $id := printf "pm-carousel-%d" .Ordinal }}
+{{ $content := replaceRE "^\n+|\n+$" "" .Inner }}
+{{ $lines := split $content "\n" }}
+
+<div class="pm-carousel-wrapper" id="{{ $id }}">
+  <div class="pm-carousel-track">
+    {{- range $lines }}
+      {{ $src := replaceRE "^\\s+|\\s+$" "" . }}
+      {{ if $src }}
+      <div class="pm-carousel-slide">
+        <img src="{{ $src | relURL }}" alt="" loading="lazy" />
+      </div>
+      {{ end }}
+    {{- end }}
+  </div>
+
+  <button class="pm-carousel-control prev" aria-label="Previous">&#10094;</button>
+  <button class="pm-carousel-control next" aria-label="Next">&#10095;</button>
+</div>
+
+<style>
+.pm-carousel-wrapper { position:relative; overflow:hidden; width:100%; margin:1rem 0; }
+.pm-carousel-track { display:flex; transition:transform .4s ease; }
+.pm-carousel-slide { flex:0 0 100%; }
+.pm-carousel-slide img { width:100%; object-fit:cover; }
+.pm-carousel-control {
+  position:absolute; top:50%; transform:translateY(-50%);
+  background:rgba(0,0,0,0.45); color:#fff; border:none;
+  padding:.25rem .6rem; cursor:pointer; font-size:1.4rem;
+}
+.pm-carousel-control.prev { left:8px; }
+.pm-carousel-control.next { right:8px; }
+</style>
+
+<script>
+(function() {
+  const el = document.getElementById("{{ $id }}");
+  const track = el.querySelector('.pm-carousel-track');
+  const slides = el.querySelectorAll('.pm-carousel-slide');
+  let current = 0;
+
+  function move(i) {
+    current = (i + slides.length) % slides.length;
+    track.style.transform = `translateX(-${current * 100}%)`;
+  }
+
+  el.querySelector('.next').onclick = () => move(current + 1);
+  el.querySelector('.prev').onclick = () => move(current - 1);
+})();
+</script>
